@@ -1,0 +1,155 @@
+\section{Resistivity of a wire}
+\label{resistivity}
+
+\begin{questions}
+\question 
+\begin{parts}
+\part Using the micrometers, measure the diameter of the wire at three different points, and calculate $d$, the average diameter\\
+
+\noindent\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+$d_{1}/\si{mm}$ & $d_{1}/\si{mm}$ & $d_{1}/\si{mm}$ & $d/\si{mm}$\\
+\hline
+&&&\\
+\hline
+\end{tabular}\\
+\part Calculate the average cross-sectional area of the wire, $A$, in \si{m^2}.
+\fillwithlines{1cm}
+\end{parts}
+\question Set up the circuit as shown below, noting the following points:
+\begin{itemize}
+\item Set the length of the wire between the crocodile clips, $l$, to be \SI{1.000}{m}.  Make the wire as straight as possible.  It may be convenient to tape the wire to the desk.
+\item Set the power supply voltage to about \SI{5}{V} d.c.
+\item The ammeter should be on the \SI{10}{A} scale.
+\item Adjust the ammeter so that the current, $I$, reads \SI{0.20}{A}.
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}[circuit ee IEC]
+%bottom rail
+\draw (0,0) node[contact]{} node[anchor=east]{\SI{0}{V}} to [circuit handle symbol={draw,shape=circle,label=center:{A},minimum size=10mm}] (8,0) to (11,0);
+\draw (0,5) node{} node[anchor=east]{+\SI{5}{V}} node[contact]{} to [resistor=adjustable] (8,5) to (11,5);
+%right end
+\draw (11,0) to [circuit handle symbol={draw,shape=circle,label=center:{V},minimum size=10mm}] (11,5);
+%contacts:
+\draw (8,0) to (8,2) node[contact]{};
+\draw (8,5) to (8,3) node[contact]{};
+\draw (8,2.5) node {\SI{1.000}{m} wire};
+\end{tikzpicture}
+\end{center}
+
+\begin{parts}
+\part Record $V$, the voltage on the voltmeter \answerline
+
+\part Calculate $R$, the resistance of the wire
+\fillwithlines{1cm}
+\end{parts}
+
+\newpage
+
+\question Repeat this proceduce for {\bf five} more lengths of wire.  \emph{If necessary, adjust the variable resistor so that the current through the wire remains at \SI{0.20}{A}.}\\
+Record the results into the table below, including the result from the previous page.
+
+\begin{center}
+\begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\multicolumn{1}{|c|}{$l$/\si{m}} & \multicolumn{1}{|c|}{$V$/\si{V}} & \multicolumn{1}{|c|}{$R$/\si{\ohm}} \\
+\hline
+1.000 & &\\
+\hline
+& &\\
+\hline
+& &\\
+\hline
+& &\\
+\hline
+& &\\
+\hline
+& &\\
+\hline
+\end{tabular}
+\end{center}
+
+\question Theory tells us that
+\[R=\frac{\rho l}{A},\]
+where $\rho$ is the resistivity of the wire.\\
+
+Therefore a graph of $R$ against $l$ should be a straight line of gradient $\frac{\rho}{A}$.
+\begin{parts}
+
+\part \emph{Plot a graph of $R$ against $l$.}
+
+\part Calculate and record below $G$, the gradient of the line.
+\fillwithlines{3cm}
+
+\part Use the above information to calculate a value for $\rho$, the resistivity of the wire.
+\fillwithlines{3cm}
+\end{parts}
+
+\newpage
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+
+\tikzset{normal lines/.style={gray, very thin}} 
+\tikzset{margin lines/.style={gray, thick}} 
+\tikzset{mm lines/.style={gray, ultra thin}} 
+\tikzset{strong lines/.style={black, very thin}} 
+\tikzset{master lines/.style={black, very thick}} 
+\tikzset{dashed master lines/.style={loosely dashed, black, very thick}} 
+
+\node at ([xshift=1cm, yshift=8.5mm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=mm lines,step=1mm] (0,0) grid +(19cm,28cm); 
+    \draw[style=strong lines,step=1cm] (0,0) grid +(19cm,28cm); 
+
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+
+
+\newpage
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+
+\tikzset{normal lines/.style={gray, very thin}} 
+\tikzset{margin lines/.style={gray, thick}} 
+\tikzset{mm lines/.style={gray, ultra thin}} 
+\tikzset{strong lines/.style={black, very thin}} 
+\tikzset{master lines/.style={black, very thick}} 
+\tikzset{dashed master lines/.style={loosely dashed, black, very thick}} 
+
+\node at ([xshift=1cm, yshift=8.5mm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=mm lines,step=1mm] (0,0) grid +(19cm,28cm); 
+    \draw[style=strong lines,step=1cm] (0,0) grid +(19cm,28cm); 
+
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+
+\newpage
+
+\question
+\begin{parts}
+
+\part Explain why the current through the wire should be kept constant.
+\fillwithlines{3cm}
+
+\part What would be the effect on the graph if the current were to increase as the length of the wire is decreased?
+\fillwithlines{3cm}
+
+\part What is the uncertainty in the measurement of the length of the wire?
+\fillwithlines{2cm}
+
+\part What is the percentage uncertainty in the measurement of the length of the wire at
+\begin{subparts}
+\subpart \SI{1.000}{m}? \answerline
+\subpart \SI{0.500}{m}? \answerline
+\end{subparts}
+
+\part Discuss the advantages and disadvantages of using a longer wire in making the experiment more reliable.
+\fillwithlines{5cm}
+\end{parts}
+\end{questions}

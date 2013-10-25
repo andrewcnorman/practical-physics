@@ -1,0 +1,85 @@
+
+\section*{Errors}
+
+In practical work in AS and A2 physics, you should be prepared to
+\begin{itemize}
+\item identify the source of uncertainties in an experiment.
+\item calculate the fractional or percentage error from the size of the measurement and the absolute error on it.
+\item combine the uncertainties of different measurements when you evaluate something which depends on a number of quantities. It is very unlikely that you will have to do a full calculation of the total error, but you may be asked, for example, to identify which individual measurement contributes the biggest uncertainty.
+\end{itemize}
+
+\subsection*{Sources of uncertainty and absolute errors}
+
+Any measurement has a statistical uncertainty associated with it. It is generally a combination of both the reading error on a measuring instrument and the uncertainty to do with the way you are performing the measurement. For example, the reading error on a \SI{1}{m} ruler is at best \SI{0.5}{mm}. If you are using it to measure the depression of another ruler, you might reasonably assign a total uncertainty of \SI{3}{mm}, to account for the fact that you may not have the measuring ruler absolutely vertical. An error of this kind is an absolute error, and has the dimension of the quantity you are measuring.
+
+Systematic errors may also be built in to the experiment, for example the ruler above may have an actual length of say \SI{99}{cm} when you have assumed to be \SI{1}{m}, or an ammeter may show a non-zero reading when disconnected from an electric circuit. Such uncertainties may not alter the reliability of your readings, but they may well affect the accuracy of a calculated quantity.
+
+\subsection*{Fractional or percentage errors}
+
+These are dimensionless and are calculated using the formula
+\[\text{fractional error} =  \frac{\text{absolute error}}{\text{size of measurement}}.\]
+
+\subsection*{Combination of errors}
+
+\begin{itemize}
+\item If you make two measurements of the same type $x$ and $y$, for example the length and breadth of a table, then
+absolute error on the sum $x+y$ or difference $x-y$ of $x$ and $y$ is equal to the sum of absolute errors on $x$ and $y$.
+\item If you make measurements of any two quantities $x$ and $y$, then 
+fractional error on the product $xy$ or quotient $x/y$ is equal to the sum of fractional errors on $x$ and $y$.
+\item If a power law holds
+\[\text{fractional error on $x^{k}$}  = k \times \text{fractional error on $x$}.\]
+\end{itemize}
+
+%Example 1 . A rectangular table is measured to have length 2.5m ± 2mm and breadth 0.5m ± 2mm. Find the absolute error on the %circumference and the area.
+
+%Answer	Absolute error on circumference = sum of absolute errors on four sides = 4 ? 2mm = 8mm
+%Fractional error on area = 
+%fractional area on length + fractional area on breadth = 2mm/2.5m +  2mm/0.5m =  0.5 %.
+%Absolute error on area = 0.5 % ? (2.5 m ? 0.5 m) =  60 cm2.
+
+%Example 2. A simple pendulum is measured to be 50cm ± 5mm in length. Ten swings are timed to take 14.0 s ± 0.2s. Which measurement contributes a larger uncertainty to a value of g derived from this experiment ?  What is the absolute error on g? 
+
+%Answer	T = 2??(l/g) therefore g = 4?2l/T2.   
+%Fractional error on g = 
+%fractional error on l + 2 ? fractional error on T = 0.5/50  + 2 ? 0.02/1.40 = 1% + 3% = 4%.
+%Therefore the error on the period has a far greater contribution than that on the length. Note that if only one swing was timed, the fractional error on the period would be ten times as large.
+%Absolute error on g = fractional error ? size of g = 4% ? 10.1 ms-2   =  0.4 ms-2. 
+%Although the value of g is greater than the true value of 9.81 ms-2, the measurement is in agreement within the error, as it should be if the errors have been realistically assessed. 
+
+%Error on a count
+
+%Any count of a number of occurrences e.g. the number of clicks of a Geiger counter in a period of time has an uncertainty associated with it. If there are N counts, then the absolute error is of size ?N. Thus the absolute error increases with N, but the fractional error =   ?N / N = 1/?N gets smaller. Therefore it is desirable to make the number of counts as big as possible.
+%E.g. if a Geiger counter records 100 background counts over a period of 1 minute, the percentage error is 100% ? (1/?100) = 10%. 
+%If the same measurement is made over 4 minutes, we expect a percentage error of 100% ? (1/?400) = 5%.
+
+\newpage
+\section*{Determining relationships by plotting graphs}
+
+When a certain relationship exists between two variables $y$ and $x$, its form can sometimes be determined by plotting a suitable graph. You should be familiar with the following cases.
+
+\subsection*{Linear}
+
+If $y = mx + c$ a graph of $y$ against $x$ should be a straight line with gradient $m$ and $y$-intercept $c$.\\
+NB $y$ is only proportional to $x$ if $c = 0$.
+
+\subsection*{Exponential}
+
+If  $y = Ae^{-mx}$ , where $A$ is a constant, then taking natural logs of both sides gives
+\[ \ln y = \ln A + \ln(e^{-mx}) = \ln A - mx.\]
+Hence a graph of $\ln y$ against $x$ should be a straight line of gradient $-m$ and intercept $\ln A$.\\
+Examples of such relationships are found in radioactive decay and in electric circuits containing capacitors.
+
+\subsection*{Polynomial}
+
+If  $y = Ax^{m}$  , then taking natural logs of both sides gives
+ \[\ln y = \ln A + \ln(x^{m}) = \ln A +  m\ln x.\]
+Hence a graph of $\ln y$ against $\ln x$ should be  a straight line of gradient $m$ and intercept $\ln A$.\\
+Examples include the variation of the period of a simple pendulum with length ($m = 0.5$) and the energy stored in a stretched spring with extension ($m = 2$).
+
+\section*{Errors obtained from graphs}
+
+When it is believed that a linear relationship exists between two quantities plotted on a graph, a straight line of best fit should be drawn through the points, which passes as close to all the points as possible. 
+
+You can draw error bars for each point so that the length of the line on either side of the point represents the absolute error you have assigned to the individual measurements. The line of best fit should pass through about two-thirds of the error bars, if you have assessed the errors realistically (and if a linear relationship holds).
+
+It is common to extract the gradient or the intercept since they often correspond to something interesting. You can evaluate the error on them by drawing another fit line, making it as steep or shallow as possible, so that it still passes through the error bars. The difference between the values so obtained for the gradient and intercept, and those of the best-fit line correspond to the absolute errors.

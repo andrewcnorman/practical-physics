@@ -1,0 +1,199 @@
+\section{Determining Planck's constant}
+\label{planck}
+
+In quantum theory, light exists as a stream of photons, each with energy $hf$, where $h$ is Planck's constant and $f$ is the frequency of the light.
+\[E_{\text{photon}}=hf=\frac{hc}{\lambda},\]
+where $\lambda$ is the wavelength of the light.
+
+In this experiment, you will attempt to determine Planck's constant $h$ by using light emitting diodes (LEDs).  These are devices, which turn electrical energy into light.  Your experiment will measure the electrical energy needed to produce light of different colours of known wavelength in coloured LEDs.
+
+\subsection{Apparatus}
+
+You need to use a d.c. power supply of \SI{6}{V}, a voltmeter and a milliammeter.  All of the LEDs you will use are in a specially-made box for this experiment, which you need to connect up with the voltage supply and measuring apparatus as shown on the box.  The circuit is as follows:\\
+
+\begin{minipage}{0.6\textwidth}
+\begin{tikzpicture}[circuit ee IEC,set diode graphic=var diode IEC graphic]
+\draw (0,0) node[contact]{} node[anchor=east]{\SI{0}{V}} to (1,0) to [resistor] (1,5) to (0,5) node{} node[anchor=east]{\SI{+6}{V}} node[contact]{};
+\draw (0,0) to (1,0) to [circuit handle symbol={draw,shape=circle,label=center:{A},minimum size=5mm}] (3,0) node{} to [resistor] (5.5,0) node{} to (9,0);
+\draw (9,0) to [circuit handle symbol={draw,shape=circle,label=center:{V},minimum size=5mm}] (9,5);
+\draw (9,5) to [circuit handle symbol={draw,shape=circle,minimum size=2mm}] (2,5) to (2,2.5);
+\draw[->] (2,2.5)--(1.2,2.5);
+\draw (5.5,0) to (5.5,1) node[contact]{};
+\draw (3.5,1) to (7.5,1);
+\foreach \diode in {0,1,...,4}
+{
+\draw (3.5+\diode,3.5) to [diode={light emitting}] (3.5+\diode,1);
+\draw (3.5+\diode,3.7) circle (0.2);
+}
+\draw[->] (5.7,4.9) .. controls (6.2,4.8) and (4.2,4.2) .. (6.2,3.8);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.35\textwidth}
+Some data on the LEDs from the manufacturer is below:\\
+
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{lcc}
+\hline
+Colour & $\lambda$/nm & $I_{\text{max}}$/mA\\
+\hline
+Red & 700 & 25\\
+Orange & 627 & 30\\
+Yellow & 590 & 30\\
+Green & 565 & 25\\
+Blue & 430 & 30\\
+\hline
+\end{tabular}
+\renewcommand{\arraystretch}{2}
+\end{minipage}
+
+\subsection{Measurements}
+For each LED, you need to take several readings of current and voltage (which will allow you to plot a current-voltage characteristic), by increasing the voltage from zero until the current reaches the manufacturer's recommended maximum current (and no further).
+
+\begin{minipage}{0.3\textwidth}
+\begin{tabular}{|p{2cm}|p{2cm}|}
+\hline
+\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
+\hline
+&\\
+\hline
+&\\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{tabular}{|p{2cm}|p{2cm}|}
+\hline
+\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
+\hline
+&\\
+\hline
+&\\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{tabular}{|p{2cm}|p{2cm}|}
+\hline
+\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
+\hline
+&\\
+\hline
+&\\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+\end{tabular}
+\end{minipage}
+
+\begin{minipage}{0.3\textwidth}
+\begin{tabular}{|p{2cm}|p{2cm}|}
+\hline
+\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
+\hline
+&\\
+\hline
+&\\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{tabular}{|p{2cm}|p{2cm}|}
+\hline
+\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
+\hline
+&\\
+\hline
+&\\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{tabular}{|p{2cm}|p{2cm}|}
+\hline
+\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
+\hline
+&\\
+\hline
+&\\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+\end{tabular}
+\end{minipage}
+
+\begin{questions}
+\question Plot the current-voltage characteristics for all of the LEDs on the {\bf same} graph, with voltage on the $x$-axis and current on the $y$-axis (take care to label the curves!)  On this graph, you need to extrapolate each curve down to the $x$-axis to find the voltage at which current first starts to flow, and light photons start to be emitted.  Use this to fill in the table below.
+
+\begin{center}
+\begin{tabular}{|l|c|p{2cm}|p{2cm}|}
+\hline
+Colour & $\lambda$ &  \multicolumn{1}{|c|}{$1/\lambda$ } & \multicolumn{1}{|c|}{$V_{\text{min}}$}\\
+ & / nm & \multicolumn{1}{|c|}{/ \ldots} & \multicolumn{1}{|c|}{/ V} \\
+\hline
+Red & 700 & &\\
+\hline
+Orange & 627 & &\\
+\hline
+Yellow & 590 & &\\
+\hline
+Green & 565 & &\\
+\hline
+Blue & 430 & &\\
+\hline
+\end{tabular}
+\end{center}
+
+\question Now plot a second graph, this time of the minimum voltage for light emission on the $y$-axis against the LED wavelength on the $x$-axis.
+
+\question Work out the gradient, showing your working on the graph. \answerline
+
+According to theory, your gradient $G$ is related to Planck's constant by $h=eG/c$, where $e$ is the electronic charge, \SI{1.6e-19}{C}, and $c$ is the speed of light, \SI{3e8}{m.s^{-1}}.
+
+\question What value does your experiment give for $h$? \answerline
+
+\question Comment briefly on this value, and on the quality of your data, on your second graph. What do you think were the biggest sources of error in this experiment?
+\end{questions}

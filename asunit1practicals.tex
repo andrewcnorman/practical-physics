@@ -1,0 +1,258 @@
+
+\documentclass[a4paper,12pt,twoside]{exam}
+\usepackage{acn-particlestyle}
+\usepackage{acn-scientific}
+\usepackage{acn-questions}
+
+\usetikzlibrary{circuits.ee.IEC}
+
+\usepackage{color}
+\definecolor{heberblue}{rgb}{0,0,1}
+
+\newcounter{saveenumi}
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{minipage}{0.2\textwidth}
+\includegraphics[width=0.8\textwidth]{img/heber.jpg}
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.7\textwidth}
+\begin{Huge}\textcolor{heberblue}{\textbf{Bishop Heber High School}}\end{Huge}
+\end{minipage}\\
+
+\bfseries
+
+\vspace{6em}
+
+\begin{Huge}Practical Physics I\end{Huge}\\
+\indent \Large Lower Sixth\\
+
+Autumn term 2013\\
+
+
+\begin{minipage}{0.45\textwidth}
+\hfill
+\includegraphics[width=0.9\textwidth]{img/positrondiscovery.jpg} 
+\hfill	
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\footnotesize{{
+The discovery photograph of the positron, the positive version of the electron and the first antimatter particle to be discovered. The cloud chamber photo was taken in 1932 by US physicist Carl Anderson. It shows the track of a positive particle that enters the chamber from below. The particle is known to be positive because of the way it bends in the chamber's magnetic field; it is known to be moving up the picture because it loses energy and so curves more in the magnetic field after traversing the \SI{6}{mm} thick lead plate in the middle. The track is too faint to be caused by a proton---it is exactly like an electron's track---and so it had to be the predicted positron.
+}}
+\end{minipage}
+\begin{flushright}
+\rmfamily{\small{CARL ANDERSON / SCIENCE PHOTO LIBRARY}}
+\end{flushright}
+
+\vfill
+
+\begin{minipage}{0.5\textwidth}
+Name:\\
+\hrule
+\vspace{0.5em} Form: \\
+\hrule
+\vspace{0.5em} Set: \\
+\hrule
+\end{minipage}
+
+\thispagestyle{empty}
+%\enlargethispage{4cm}
+	
+\end{titlepage}
+
+\newpage
+\thispagestyle{empty}
+
+\vspace*{4cm}
+
+\begin{center}
+\fbox{
+\begin{minipage}{0.65\textwidth}
+\vspace*{1em}
+\begin{center}
+\includegraphics[width=0.3\textwidth]{by-nc-sa.png}
+\end{center}
+\raggedright
+
+This work by A.C. Norman is licensed under a Creative Commons
+Attribution-NonCommercial-ShareAlike License.
+
+{\footnotesize\texttt{http://creativecommons.org/licenses/by-nc-sa/3.0/}}\\
+
+\vspace{1em}
+
+Non-commercial uses are thus permitted without any
+further permission from the copyright owner.\\
+
+\vspace{1em}
+
+%Permissions beyond the scope of this license are
+%administered by the author. Information on how
+%to request permission may be found at:
+%http://www.randomhouse.com/about/
+%permissions.html
+\end{minipage}
+}
+\end{center}
+
+\newpage
+
+\include{res/commontips}
+
+\newpage
+\section*{Index}
+%\setlength{\extrarowheight}{0.3cm}
+\renewcommand{\arraystretch}{2}
+\begin{center}
+\begin{tabular}{|l|c|p{2.5cm}|p{2cm}|c|}
+\hline
+\multicolumn{1}{|c|}{\bf Experiment} & \multicolumn{1}{|c|}{\bf Page} & \multicolumn{1}{|c|}{\bf Date} & \multicolumn{1}{|c|}{\bf Mark}\\
+\hline
+\ref{ivchar} - $I-V$ characteristics & \pageref{ivchar} & & \\
+\hline
+\ref{intres} - Internal Resistance & \pageref{intres} & & \\
+\hline
+\ref{resistivity} - Resistivity of a wire & \pageref{resistivity} & &\\
+\hline
+\ref{planck} - Planck's Constant & \pageref{planck} & & \\
+\hline
+\ref{photoelectric} - Photoelectric effect & \pageref{photoelectric} & & \\
+\hline
+\ref{tracks} - Particle tracks & \pageref{tracks} & &\\
+\hline
+\ref{bubble} - Bubble chamber & \pageref{bubble} & &\\
+%\hline
+%\ref{electron} - Electron specific charge & \pageref{electron} & &\\
+%\hline
+%\ref{gamma} - $\gamma$ absorption & \pageref{gamma} & &\\
+%\hline
+%\ref{decay} - Radioactive decay & \pageref{decay} & & \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Writing up A-level practicals}
+
+During your practical lessons over the next year or two we require you to perform the practical, produce some results, and do some processing of the data.  Possibly even evaluating a quantity which appears to have no relevance!  You will then usually answer some questions relating to possible errors.
+
+The aims of the experiments are to supplement the theory taught in lessons, to give you some insight into experimental physics and also to help you to develop skills which will help you in the practical examination.  We have tried to make this workbook fairly complete, and you will not usually need to make copious notes or draw diagrams.  You will simply answer the questions asked by filling in the blanks in this booklet.  Since the demands on you in this respect are relatively low, we do demand high standards from you. Please take care and learn from your mistakes--do not simply glance at the mark you have gained from the previous practical (instead, see where you dropped marks, and ensure you do not repeat these errors).
+
+The apparatus in the actual practical examination will be set up for you ready to use.  In the lessons, we do not have the time to do this, and you will have to set up the apparatus yourself (and put it away properly for the next person to use!)  We need you to fill in the index above each week with the date on which you did a particular practical and after marking we shall insert a mark for it.
+
+You will be marked on the following points, if applicable:
+\begin{itemize}
+\setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+\item Results table (probably in columns) with headings including appropriate unit
+\item All figures to an appropriate accuracy, probably 3 s.f.
+\item Graphs with appropriate scales (no scales of 3, cannot be doubled and still fit on axis). Minimum acceptable size: $\SI{8}{cm}\times\SI{8}{cm}$
+\item Accuracy of point plotting from results table, appropriate line of best fit
+\item LARGE gradient triangle shown on graph, length of $\Delta y$ and $\Delta x$ marked on with units
+\item Gradient calculation must be shown $(\Delta y/\Delta x)$ including units throughout, NB some may be negative
+\item Estimated of possible errors in quantities, BE REALISTIC
+\item Your answers on how to reduce errors, how you ensured accuracy in your experiment
+\end{itemize}
+
+We want you to enjoy practical work but also ensure you are continually improving since it is a very important skill and furthermore a rich source of very straightforward marks!
+
+\normalsize
+
+\cleardoublepage
+
+\include{prac/electricity-ivcharacteristics}%graph paper incl.
+
+\cleardoublepage
+
+\include{prac/electricity-internalresistance}
+
+\cleardoublepage
+
+\include{prac/electricity-wireresistivity}
+
+\cleardoublepage
+
+\include{prac/quantum-planck-led}
+
+\include{res/graphpaper}
+
+\cleardoublepage
+
+\include{prac/quantum-photoelectric}%graph paper incl.
+
+\cleardoublepage
+
+\include{prac/particles-collider}
+
+\cleardoublepage
+
+\include{prac/particles-bubblechambertracks}
+
+\cleardoublepage
+
+%\include{prac/especificq-bcircles}
+
+%\cleardoublepage
+
+%\include{prac/gammaabsorption}
+
+%\include{res/graphpaper}
+
+%\cleardoublepage
+
+%\include{res/graphpaper}
+
+%\cleardoublepage
+
+%\include{prac/radioactivityanalogue}
+
+%\include{res/graphpaper}
+
+%\cleardoublepage
+
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SOME MORE IDEAS FOR UNIT 1 PRACTICALS BELOW!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Momentum conservation}
+The first activity is to verify, using bubble chamber tracks, that momentum conservation is obeyed in collisions of subatomic particles.
+The actual experiment took place at CERN in the mid 1970s with incident protons of a momentum \SI{2}{GeV/$c$}.
+The bubble chamber photograph shows an elastic collision between a proton entering from the left, and a (more-or-less) stationary proton in a hydrogen-filled bubble chamber.
+
+Students can measure the radii r of the paths followed by the protons, using this template of curves provided (click here), and since momentum p is directly proportional to r (click here), they can construct a vector diagram to verify that p = p1 + p2 within the errors of the method. 
+
+\section{Cloud chamber}
+\label{cloud}
+
+The cloud chamber was invented by C.T.R. Wilson, a physicist at Cambridge University, in 1911, and won the Nobel prize in physics in 1927 for its development.  It played a prominent role in experimental particle physics until the bubble chamber was invented in the 1950s, and the discoveries of the positron in 1932 and the kaon in 1953 were made using cloud chambers as detectors.
+
+In the chamber, conditions for cloud formation are created by cooling a saturated vapour until it is slightly supersaturated.  This means that it is cool enough for droplets to grow, but not cool enough for the droplets to form spontaneously, and it is very sensitive to anything which might make forming a droplet slightly easier. When an ionizing particle passes through the chamber, it will tend to crash into a series of molecules leaving a number of charged ions.  The vapour then starts to condense on these ions, and this is where droplets will form and grow.  This means that in the wake of the ionizing particles a line of droplets - a thin cloud trail - is formed allowing you to see their paths (rather like that behind a jet aircraft in an otherwise clear sky).
+
+The cloud chamber you will use is slightly different from Wilson's original design.  It was devised in 1939 by Alexander Langsdorf, and is known as a diffusion cloud chamber.  In this design, the bottom of the chamber is cooled to a rather low temperature, and the vapour is introduced from the top of the chamber.  The vapour cools as it falls, until at some level it starts to condense, forming a cloud of alcohol droplets which fall down to the plate at the bottom.  Just above the point where the droplets are forming naturally there is an area of supersaturated vapour.  This region is where the ionizing particle tracks are formed, and particles are detected.
+
+%Diagram
+
+%Instructions on getting it to work
+
+%http://www.practicalphysics.org/go/Experiment_584.html?topic_id=40&collection_id=78
+
+%Questions
+
+\section{Particle Physics Detector}
+\texttt{lppp.ac.uk}
+
+%already available on website. Select suitable material and questions.
+
+\section{Line spectra}
+
+% need diffraction theory

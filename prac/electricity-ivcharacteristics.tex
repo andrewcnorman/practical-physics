@@ -1,0 +1,186 @@
+\section{$I-V$ characteristics}
+\label{ivchar}
+
+This practical comprises three related experiments, which will allow you to plot $I-V$ graphs for an ohmic conductor, a filament lamp, and a diode.
+
+Set up the circuit as shown below, noting the following points:
+\begin{itemize}
+\item Place the components in the board as shown, with the ohmic conductor (resistor) as the first component
+\item The ammeter is to be set on the \SI{200}{mA} range
+\item the voltmeter is to be set on the 2V range
+\item Set the power supply voltage to about \SI{4}{V} d.c. making sure the positive and negative are as shown
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}[circuit ee IEC]
+%power supply + rheostat slide
+\draw (0,0) node[contact]{} node[anchor=east]{\SI{0}{V}} to (1,0) to [resistor] (1,5) to (0,5) node{} node[anchor=east]{+\SI{4}{V}} node[contact]{};
+%bottom rail
+\draw (0,0) to (11,0);
+%right end
+\draw (11,0) to [circuit handle symbol={draw,shape=circle,label=center:{V},minimum size=10mm}] (11,5);
+%pot +top rail
+\draw (2,2.5) to (2,5) to [circuit handle symbol={draw,shape=circle,label=center:{A},minimum size=10mm}] (8,5) to (11,5);
+\draw[->] (2,2.5)--(1.2,2.5);
+%contacts:
+\draw (8,0) to (8,2) node[contact]{};
+\draw (8,5) to (8,3) node[contact]{};
+\draw (8,2.5) node {component};
+\end{tikzpicture}
+\end{center}
+
+\begin{questions}
+\question Using the variable resistor (and if necessary the voltage setting on the power supply), measure the current through  the ohmic conductor for voltages between \SI{0.00}{V} and \SI{0.60}{V}, ion \SI{0.10}{V} steps.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Voltage $V$ / V & Current $I$ / mA\\
+\hline 
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\question Replace the ohmic conductor with the filament lamp, and repeat the experiment.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Voltage $V$ / V & Current $I$ / mA\\
+\hline 
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+& \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\question Replace the filament lamp withthe diode. \textbf{Make sure that the diode is forward biased}, i.e. it faces in the direction of conventional current flow.  Repeat the experiment, however this time increase the p.d. in steps of \SI{0.10}{V} until \SI{0.5}{V}, noting the current, then continue by increasing the current in steps of \SI{20.0}{mA}, noting the voltage.
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Voltage $V$ / V & Current $I$ / mA\\
+\hline 
+0.00 & \\
+\hline
+0.10 & \\
+\hline
+0.20 & \\
+\hline
+0.30 & \\
+\hline
+0.40 & \\
+\hline
+0.50 & \\
+\hline
+& 20.0\\
+\hline
+& 40.0\\
+\hline
+& 60.0\\
+\hline
+\end{tabular}
+\end{center}
+
+\question Plot a graph of $I$ on the $y$-axis against $V$ on the $x$-axis for each component \textbf{using the same scales (but different axes) for all.}
+
+
+\newpage
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+
+\tikzset{normal lines/.style={gray, very thin}} 
+\tikzset{margin lines/.style={gray, thick}} 
+\tikzset{mm lines/.style={gray, ultra thin}} 
+\tikzset{strong lines/.style={black, very thin}} 
+\tikzset{master lines/.style={black, very thick}} 
+\tikzset{dashed master lines/.style={loosely dashed, black, very thick}} 
+
+\node at ([xshift=1cm, yshift=8.5mm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=mm lines,step=1mm] (0,0) grid +(19cm,28cm); 
+    \draw[style=strong lines,step=1cm] (0,0) grid +(19cm,28cm); 
+
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+
+
+\newpage
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+
+\tikzset{normal lines/.style={gray, very thin}} 
+\tikzset{margin lines/.style={gray, thick}} 
+\tikzset{mm lines/.style={gray, ultra thin}} 
+\tikzset{strong lines/.style={black, very thin}} 
+\tikzset{master lines/.style={black, very thick}} 
+\tikzset{dashed master lines/.style={loosely dashed, black, very thick}} 
+
+\node at ([xshift=1cm, yshift=8.5mm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=mm lines,step=1mm] (0,0) grid +(19cm,28cm); 
+    \draw[style=strong lines,step=1cm] (0,0) grid +(19cm,28cm); 
+
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+
+\newpage
+\question \begin{parts} 
+\part Calculate the gradient of the graph for the ohmic conductor
+
+\fillwithlines{3cm}
+
+\part The resistance of the ohmic conductor is given by the reciprocal of this gradient.  Calculate the resistance of the ohmic conductor.
+
+\fillwithlines{2cm}
+
+\part Using values from you table, calculate the resistance of the filament lamp for two different calues of voltage.
+
+\fillwithlines{2cm}
+
+\part Explain why the resistance of the filament lamp changes in this way.
+
+\fillwithlines{3cm}
+
+\part Explain the shape of the diode graph in terms of its resistance.
+
+\fillwithlines{3cm}
+
+\part What would the graph for the diode look like if it were to be placed in the reverse direction?
+
+\fillwithlines{3cm}
+
+\end{parts}
+
+\end{questions}

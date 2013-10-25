@@ -1,0 +1,114 @@
+\section{Refraction effects}
+\label{refraction}
+
+This practical comprises two related experiments, which will investigate the refraction (bending) of the paths of light rays travelling from air into perspex and from perspex into air.
+
+\subsection{Air--perspex}
+
+You will be given a D-shaped block of perspex to use in this experiment.  To generate `light rays' (really these are idealized beams of light travelling in straight lines) a ray box can be used.  This is a filament bulb in a box which has a slot at one end into which a plastic sheet with a slit in can be slotted.  A thin `ray' of light emerges through this slit, and any other openings in the box can be blanked off with opaque metal blanking sheets.  For this experiment, you will be aiming the light beam into the long flat face of the perspex block at several different angles of incidence.  
+
+\begin{questions}
+\question Draw around the block in the space provided on the following page in this workbook, and use a protractor to mark the `normal' halfway along the long edge of this outline at \SI{90}{\degree} to the surface.  Then mark on and label the incident ray paths you plan to use in the experiment (remember to measure the angles of incidence round from the normal).  An example starting diagram is shown below (but yours should be real size).
+
+\hfill\begin{tikzpicture}[scale=0.55,
+    lightray/.style={postaction={decorate,decoration={markings,
+          mark=at position .55 with {\arrow{>}}}}}
+    ]
+    \draw[thick] (0,0) --(6,0); 
+    \draw[thick] (6,0) arc (0:-180:3);
+    \draw[lightray] (3,0) ++(110:3)node[above]{\SI{20}{\degree}} -- ++(-70:3);
+    \draw[lightray] (3,0) ++(130:3)node[above]{\SI{40}{\degree}} -- ++(-50:3);
+    \draw[lightray] (3,0) ++(150:3)node[above]{\SI{60}{\degree}} -- ++(-30:3);
+    \draw[dashed] (3,-2) -- (3,2);
+    \draw (4.5,-0.5) node{perspex};
+    \draw (4.5,1.5) node{air};
+  \end{tikzpicture}\hfill{}
+
+\question Put the perspex block in position on its outline, and use the ray box to aim rays down each of the paths.  You need to draw in and label the resulting paths of the refracted rays on the paper.  Once you have completed this, remove the perspex block and measure the angles of refraction (remember to measure these round from the normal).  Fill in your results in the table below, and then work out the sine of each angle on a calculator and record it in the appropriate column.\\
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+Angle of incidence $\theta_{i}$ / \si{\degree} & Angle of refraction $\theta_{r}$ / \si{\degree} & $\sin(\theta_{i}/\si{\degree})$ & $\sin(\theta_{r}/\si{\degree})$ \\
+\hline 
+0&&0.000& \\
+\hline
+&&& \\
+\hline
+&&& \\
+\hline
+&&& \\
+\hline
+&&& \\
+\hline
+&&& \\
+\hline
+\end{tabular}\\
+
+\newpage
+
+\vspace*{\fill}
+
+\question Plot a graph of $\sin(\theta_{r}/\si{\degree})$ on the $y$-axis and $\sin(\theta_{i}/\si{\degree})$ on the $x$-axis.
+
+\question Work out the gradient on your graph, and record it here, with a unit: \answerline
+
+According to theory, the gradient $G$ of your graph is related to the refractive index $n$ of perspex by
+\[n=\frac{1}{G}.\]
+
+The accepted value for the refractive index of perspex is 1.49.
+\end{questions}
+
+\newpage
+
+\subsection{Perspex--air}
+
+In this experiment, you will find out what happens to light aimed at the same point from {\emph inside} the glass block.  You ought to find that there are two possible cases: refraction with the light bending away from the normal line (plus some reflexion back into the block), and reflexion back into the block from the surface with no light escaping.
+
+\begin{questions}
+\question Start by drawing around the block in the space provided on the following page, using a protractor to mark the `normal' exactly halfway along the long edge, and marking in the incident ray paths (this time entering the perspex at \SI{90}{\degree} to the curved surface of the block), as shown in the example below.
+
+\hfill\begin{tikzpicture}[scale=0.55,
+    lightray/.style={postaction={decorate,decoration={markings,
+          mark=at position .55 with {\arrow{>}}}}}
+    ]
+    \draw[thick] (0,0) --(6,0); 
+    \draw[thick] (6,0) arc (0:-180:3);
+    \draw[lightray] (3,0) ++(-110:4)node[below]{\SI{20}{\degree}} -- ++(70:4);
+    \draw[lightray] (3,0) ++(-130:4)node[below]{\SI{40}{\degree}} -- ++(50:4);
+    \draw[lightray] (3,0) ++(-150:4)node[below]{\SI{60}{\degree}} -- ++(30:4);
+    \draw[dashed] (3,-2) -- (3,2);
+    \draw (4.5,-0.5) node{perspex};
+    \draw (4.5,-3.5) node{air};
+  \end{tikzpicture}\hfill{}
+
+\question Put the perspex block in position on its outline, and use the ray box to aim rays down each of the paths.  You need to draw in and label the resulting paths of the refracted and internally reflected rays on the paper.  
+
+\question Now remove the perspex block and measure the angles of refraction and reflexion (remember to measure these round from the normal).  Fill in your results in the table below; if you cannot measure an angle, record this in the table too.
+
+\question Using a calculator, and taking the refractive index of perspex $n=1.49$, fill in the columns involving sines.\\
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ $\theta_{i}$ / \si{\degree} & $n\sin(\theta_{i}/\si{\degree})$ & $\theta_{r}$ / \si{\degree} & $\sin(\theta_{r}/\si{\degree})$ & Angle of reflexion $r$ / \si{\degree}\\
+\hline 
+&&&& \\
+\hline
+&&&& \\
+\hline
+&&&& \\
+\hline
+&&&& \\
+\hline
+&&&& \\
+\hline
+&&&& \\
+\hline
+\end{tabular}\\
+
+\newpage
+
+\vspace*{\fill}
+
+\question What patterns, if any, do you notice in the data you have recorded?  Describe as fully as possible. \fillwithlines{5cm}
+
+\end{questions}

@@ -1,0 +1,188 @@
+
+\documentclass[a4paper,12pt,twoside]{exam}
+\usepackage{acn-particlestyle}
+\usepackage{acn-scientific}
+\usepackage{acn-questions}
+
+\usetikzlibrary{circuits.ee.IEC}
+
+\usepackage{color}
+\definecolor{heberblue}{rgb}{0,0,1}
+
+\newcounter{saveenumi}
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{minipage}{0.2\textwidth}
+\includegraphics[width=0.8\textwidth]{img/heber.jpg}
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.7\textwidth}
+\begin{Huge}\textcolor{heberblue}{\textbf{Bishop Heber High School}}\end{Huge}
+\end{minipage}\\
+
+\bfseries
+
+\vspace{6em}
+
+\begin{Huge}Practical Physics II\end{Huge}\\
+\indent \Large Lower Sixth\\
+
+Spring term 2012\\
+
+
+\begin{minipage}{0.45\textwidth}
+\hfill
+\includegraphics[width=0.8\textwidth]{img/doubleslit.jpg} 
+\hfill	
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\footnotesize{{
+A modern-day replica of Thomas Young's double-slit experiment, a classic experimental demonstration of the wave nature of light. The interference patterns shown are observed when a coherent beam from either a red helium-neon laser (\SI{632.8}{nm}, top), or a green helium-neon laser (\SI{543.4}{nm}, bottom), is used to illuminate two \SI{25}{\micro\meter} wide slits which are \SI{75}{\micro\meter} apart. The two diffraction patterns are observed at the same distance from the double-slit. Note that the fringe spacing is smaller for shorter (green) wavelength.
+}}
+\end{minipage}
+\begin{flushright}
+\rmfamily{\small{GIPHOTOSTOCK / SCIENCE PHOTO LIBRARY}}
+\end{flushright}
+
+\vfill
+
+\begin{minipage}{0.5\textwidth}
+Name:\\
+\hrule
+\vspace{0.5em} Form: \\
+\hrule
+\vspace{0.5em} Set: \\
+\hrule
+\end{minipage}
+
+\thispagestyle{empty}
+%\enlargethispage{4cm}
+	
+\end{titlepage}
+
+\newpage
+\thispagestyle{empty}
+
+\vspace*{4cm}
+
+\begin{center}
+\fbox{
+\begin{minipage}{0.65\textwidth}
+\vspace*{1em}
+\begin{center}
+\includegraphics[width=0.3\textwidth]{img/by-nc-sa.png}
+\end{center}
+\raggedright
+
+This work by A.C. Norman is licensed under a Creative Commons
+Attribution-NonCommercial-ShareAlike License.
+
+{\footnotesize\texttt{http://creativecommons.org/licenses/by-nc-sa/3.0/}}\\
+
+\vspace{1em}
+
+Non-commercial uses are thus permitted without any
+further permission from the copyright owner.\\
+
+\vspace{1em}
+
+%Permissions beyond the scope of this license are
+%administered by the author. Information on how
+%to request permission may be found at:
+%http://www.randomhouse.com/about/
+%permissions.html
+\end{minipage}
+}
+\end{center}
+
+\newpage
+
+\include{res/commontips}
+
+\newpage
+\section*{Index}
+%\setlength{\extrarowheight}{0.3cm}
+\renewcommand{\arraystretch}{1.6}
+\begin{center}
+\begin{tabular}{|l|c|p{2.5cm}|p{2cm}|c|}
+\hline
+\multicolumn{1}{|c|}{\bf Experiment} & \multicolumn{1}{|c|}{\bf Page} & \multicolumn{1}{|c|}{\bf Date} & \multicolumn{1}{|c|}{\bf Mark}\\
+\hline
+\ref{refraction} - Refraction effects & \pageref{refraction} & &\\
+\hline
+\ref{disktracks} - CD \& DVD track spacing & \pageref{disktracks} & &\\
+\hline
+\ref{restubes} - Resonance tubes & \pageref{restubes} & & \\
+\hline
+\ref{dlines} - $\lambda$ of sodium D lines & \pageref{dlines} & & \\
+\hline
+\ref{young} - $\lambda$ of laser light & \pageref{young} & &\\
+\hline
+\ref{micro} - Microwave diffraction & \pageref{micro} & &\\
+\hline
+\end{tabular}
+\renewcommand{\arraystretch}{1}
+\end{center}
+
+\section*{Writing up A-level practicals}
+
+During your practical lessons over the next year or two we require you to perform the practical, produce some results, and do some processing of the data.  Possibly even evaluating a quantity which appears to have no relevance!  You will then usually answer some questions relating to possible errors.
+
+The aims of the experiments are to supplement the theory taught in lessons, to give you some insight into experimental physics and also to help you to develop skills which will help you in the practical examination.  We have tried to make this workbook fairly complete, and you will not usually need to make copious notes or draw diagrams.  You will simply answer the questions asked by filling in the blanks in this booklet.  Since the demands on you in this respect are relatively low, we do demand high standards from you. Please take care and learn from your mistakes--do not simply glance at the mark you have gained from the previous practical (instead, see where you dropped marks, and ensure you do not repeat these errors).
+
+The apparatus in the actual practical examination will be set up for you ready to use.  In the lessons, we do not have the time to do this, and you will have to set up the apparatus yourself (and put it away properly for the next person to use!)  We need you to fill in the index above each week with the date on which you did a particular practical and after marking we shall insert a mark for it.
+
+You will be marked on the following points, if applicable:
+\begin{itemize}
+\setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+\item Results table (probably in columns) with headings including appropriate unit
+\item All figures to an appropriate accuracy, probably 3 s.f.
+\item Graphs with appropriate scales (no scales of 3, cannot be doubled and still fit on axis). Minimum acceptable size: $\SI{8}{cm}\times\SI{8}{cm}$
+\item Accuracy of point plotting from results table, appropriate line of best fit
+\item LARGE gradient triangle shown on graph, length of $\Delta y$ and $\Delta x$ marked on with units
+\item Gradient calculation must be shown $(\Delta y/\Delta x)$ including units throughout, NB some may be negative
+\item Estimated of possible errors in quantities, BE REALISTIC
+\item Your answers on how to reduce errors, how you ensured accuracy in your experiment
+\end{itemize}
+
+We want you to enjoy practical work but also ensure you are continually improving since it is a very important skill and furthermore a rich source of very straightforward marks!
+
+\cleardoublepage
+
+\include{prac/refractioneffects}
+
+\include{res/graphpaper}
+
+\cleardoublepage
+
+\include{prac/disktrackspacing}
+
+\cleardoublepage
+
+\include{prac/soundspeed-resonancetubes}
+
+\include{res/graphpaper}
+
+\cleardoublepage
+
+\include{prac/wavelengthbydiffraction}
+
+\cleardoublepage
+
+\include{prac/youngslits-laser}
+
+\include{res/graphpaper}
+
+\cleardoublepage
+
+\include{prac/youngslits-microwave}
+
+\include{res/graphpaper}
+
+\end{document}

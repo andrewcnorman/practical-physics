@@ -1,0 +1,108 @@
+\section{Absorption of $\gamma$ radiation}
+\label{gamma}
+%Experiment from IA practical lab
+%http://www.practicalphysics.org/go/Experiment_590.html?topic_id=40&collection_id=80
+%Precautions from practical physics.org
+
+High-energy photons ($\gamma$-rays) are emitted in radioactive decays of excited nuclei.  Such nuclei can form as a result of beta decay, for example:
+\[\isotope[60][27]{Co}\longrightarrow\text{electron}+\text{antineutrino}+\isotope[60][28]{Ni}^{**}\text{(excited state)}\]
+and
+\[\isotope[60][28]{Ni}^{**}\longrightarrow\isotope[60][28]{Ni}^{*}+\gamma\text{-ray photon (\SI{1.17}{MeV})}\]
+\[\isotope[60][28]{Ni}^{*}\longrightarrow\isotope[60][28]{Ni}\text{(ground state)}+\gamma\text{-ray photon (\SI{1.33}{MeV})}.\]
+The half life of the first decay is 5.27 year, and the last two are almost instantaneous.
+
+From a simple theory for the interaction of a beam of photons with matter, the number of photons per second (the intensity) traversing a thickness $d$ of the material is given by
+\[I=I_{0}e^{-\mu d},\]
+where $I_{0}$ is the incident photon intensity.
+
+{\bf Unless otherwise indicated, you and your partner should take separate sets of measurements, and do the graphical work and calculations independently.}  You should however work together in making the observations and compare your results.  This will allow you to check for mistakes in your work.
+
+\subsection{Setting up}
+
+First, connect the Geiger-M\"{u}ller (G-M) tube to the Philip Harris ratemeter, switch it on and set it up so that the microphone clicks for each decay event.
+
+Unfortunately, the school currently has no scalar, which would allow decay events to be counted.  However, it is possible to connect the terminals marked `chart output' to a computer via its microphone input.  The waveform can then be recorded, displayed and analysed using the open source software Audacity \texttt{http://audacity.sourceforge.net/} allowing the number of decay events to be counted (though this is somewhat laborious at present).
+
+Now set up the source holder ({\bf without} the radioactive source at this stage) on the measurement track, and put the G-M tube in position about \SI{10}{cm} away from the source holder.  Connect the ratemeter to a computer as described, and open Audacity.
+
+\begin{center}
+\includegraphics[width=0.4\textwidth]{img/gammatrack.jpg}
+\end{center}
+
+\subsection{Background count}
+Firstly, you need to measure the background radiation in the laboratory (due to cosmic rays, rocks).  Make sure the experiment is set up as it will be carried out (minus the source).  The apparatus should be positioned so that the source will point towards a wall, away from people.
+
+With the ratemeter's microphone on, record the `chart output' signal from the ratemeter for a good 3 minutes (you can select 3 minutes of audio later).  You might find that you need to have the laptop unplugged from the mains (the \SI{50}{Hz} mains supply introduces a lot of unwanted noise into the signal, which may swamp the detector pulses).  I also found that moving the mouse produced noises, so leave it alone whilst measuring.
+
+Once the measurement has finished, you need to count the audio pulses.  Select exactly 3 minutes of audio recording, and amplify this (\texttt{effects > amplify}, default settings are usually adequate).  Record the number of pulses in each minute:\\
+
+\noindent\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+Minute 1 & Minute 2 & Minute 3 & Total\\
+\hline
+&&&\\
+\hline
+\end{tabular}\\
+
+\begin{questions}
+\question What is the number of background counts per second? \answerline
+
+\question Look again at your results.  How accurately do you know the background rate (to which significant figure are you confident and why)? \fillwithlines{1cm}
+
+\subsection{Lead absorption}
+
+You have a selection of coated lead plates ($10\times\SI{1}{mm}$, $5\times\SI{2}{mm}$).  You should check the thickness of the plates using a screw-gauge micrometer, to see whether it differs significantly from the advertised values.  Record you workings and conclusions below. \fillwithlines{3cm}
+
+Now ask for the $\gamma$ source.
+
+\noindent\fbox{\parbox{\textwidth}{
+CAUTION This experiment involves the use of radioactive materials.  There must be absolutely no eating or drinking, applying of make-up.  The cup-type source should only be handled by means of the stem, and kept at least \SI{10}{cm} away from the hand; large forceps are ideal.  Do not point the source at anyone, neither look at the active surface (behind the wire mesh).  Minimize the time the source is unshielded (i.e.\ outside of its lead pot and hardwood container).
+}}
+
+The source was manufactured by a different company from the measurement track, with the result that the source must at present be held in by blu-tack!
+
+\question Ask for assistance in getting the source into the holder from its box.
+
+\question You now need to record the ratemeter output, and fill in the count rate for various thicknesses of lead in the table.
+
+\begin{center}
+\begin{tabular}{|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+\multicolumn{1}{|c|}{Thickness/\si{mm}} & \multicolumn{1}{|c|}{Count rate/\si{s^{-1}}} & \multicolumn{1}{|c|}{Corrected rate $I$/\si{s^{-1}}} & \multicolumn{1}{|c|}{$\ln(I/\si{s^{-1}})$} \\
+\hline
+0.0 & & &\\
+\hline
+& & &\\
+\hline
+& & &\\
+\hline
+& & &\\
+\hline
+& & &\\
+\hline
+& & &\\
+\hline
+& & &\\
+\hline
+& & &\\
+\hline
+\end{tabular}
+\end{center}
+
+\question Put the source away (but leave the lead in position for now if you can, in case you need to check a reading) and work out the corrected readings (measured counts -- background) and the final column on your calculator.
+
+\question Plot a graph of $\ln I$ on the $y$-axis against the thickness of lead on the $x$-axis.
+
+\question Work out the gradient of your graph.  Show all your working on the graph, but copy the result here. \answerline
+
+It can be shown that your gradient is a measure of $\mu$, the absoption coefficient of lead.  The textbook value of $\mu$ for \SI{1.17}{MeV}--\SI{1.33}{MeV} photons in lead is $\approx\SI{20}{m^{-1}}$.
+
+\question Work out the percentage error between your result and the accepted value.\fillwithlines{2cm}
+
+\question How could you have improved the accuracy of your values for the count rates?  Give a reason why your suggestion would improve matters.  \fillwithlines{3cm}
+
+\question What do you think the biggest source of error was in this experiment?  How could it be reduced? \fillwithlines{2cm}
+
+\question How could the experimental technique have been improved? \fillwithlines{2cm}
+
+\end{questions}

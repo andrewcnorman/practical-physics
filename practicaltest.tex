@@ -1,0 +1,127 @@
+
+\documentclass[a4paper,12pt,twoside]{exam}
+\usepackage{acn-particlestyle}
+\usepackage{acn-scientific}
+\usepackage{acn-questions}
+
+\usetikzlibrary{circuits.ee.IEC}
+
+\usepackage{color}
+\definecolor{heberblue}{rgb}{0,0,1}
+
+\newcounter{saveenumi}
+
+
+\begin{document}
+
+\begin{titlepage}
+
+\begin{minipage}{0.2\textwidth}
+\includegraphics[width=0.8\textwidth]{img/heber.jpg}
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}{0.7\textwidth}
+\begin{Huge}\textcolor{heberblue}{\textbf{Bishop Heber High School}}\end{Huge}
+\end{minipage}\\
+
+\bfseries
+
+\vspace{6em}
+
+\begin{Huge}Practical Physics\end{Huge}\\
+\indent \Large Sixth form\\
+
+Draft version\\
+
+
+\begin{minipage}{0.45\textwidth}
+\hfill
+%\includegraphics[width=0.8\textwidth]{img/doubleslit.jpg} 
+\hfill	
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+%\footnotesize{{
+%A modern-day replica of Thomas Young's double-slit experiment, a classic experimental demonstration of the wave nature of light. The interference patterns shown are observed when a coherent beam from either a red helium-neon laser (\SI{632.8}{nm}, top), or a green helium-neon laser (\SI{543.4}{nm}, bottom), is used to illuminate two \SI{25}{\micro\meter} wide slits which are \SI{75}{\micro\meter} apart. The two diffraction patterns are observed at the same distance from the double-slit. Note that the fringe spacing is smaller for shorter (green) wavelength.
+%}}
+\end{minipage}
+\begin{flushright}
+%\rmfamily{\small{GIPHOTOSTOCK / SCIENCE PHOTO LIBRARY}}
+\end{flushright}
+
+\vfill
+
+\begin{minipage}{0.5\textwidth}
+Name:\\
+\hrule
+\vspace{0.5em} Form: \\
+\hrule
+\vspace{0.5em} Set: \\
+\hrule
+\end{minipage}
+
+\thispagestyle{empty}
+%\enlargethispage{4cm}
+	
+\end{titlepage}
+
+\newpage
+\thispagestyle{empty}
+
+\vspace*{4cm}
+
+\begin{center}
+\fbox{
+\begin{minipage}{0.65\textwidth}
+\vspace*{1em}
+\begin{center}
+\includegraphics[width=0.3\textwidth]{by-nc-sa.png}
+\end{center}
+\raggedright
+
+This work by A.C. Norman is licensed under a Creative Commons
+Attribution-NonCommercial-ShareAlike License.
+
+{\footnotesize\texttt{http://creativecommons.org/licenses/by-nc-sa/3.0/}}\\
+
+\vspace{1em}
+
+Non-commercial uses are thus permitted without any
+further permission from the copyright owner.\\
+
+\vspace{1em}
+
+%Permissions beyond the scope of this license are
+%administered by the author. Information on how
+%to request permission may be found at:
+%http://www.randomhouse.com/about/
+%permissions.html
+\end{minipage}
+}
+\end{center}
+
+\newpage
+
+%\include{res/commontips}
+
+\normalsize
+
+\newpage
+\section*{Index}
+%\setlength{\extrarowheight}{0.3cm}
+\renewcommand{\arraystretch}{1.6}
+\begin{center}
+\begin{tabular}{|l|c|p{2.5cm}|p{2cm}|c|}
+\hline
+\multicolumn{1}{|c|}{\bf Experiment} & \multicolumn{1}{|c|}{\bf Page} & \multicolumn{1}{|c|}{\bf Date} & \multicolumn{1}{|c|}{\bf Mark}\\
+\hline
+\ref{tracks} - Particle tracks & \pageref{tracks} & &\\
+\hline
+\end{tabular}
+\renewcommand{\arraystretch}{1}
+\end{center}
+
+\cleardoublepage
+
+\include{prac/particles-cerntracks}
+
+\end{document}

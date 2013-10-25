@@ -1,0 +1,165 @@
+\section{CD \& DVD track spacing}
+\label{disktracks}
+
+This experiment uses the diffraction of laser light from the `land' of a CD and DVD\footnote{CD stands for `compact disk' and DVD stands for `digital versatile disk'.} to determine the \emph{pitch} of the spiral data track.  Data is encoded on an optical disk in a series of tiny indentations known as `pits' made in a spiral track, starting at the centre and ending at the edge of the disk, on a thin layer of aluminium (or more rarely gold) known as `land'.  
+
+\begin{minipage}{0.3\textwidth}\includegraphics[width=0.9\textwidth]{img/cd-pitsland.jpg}\\
+{\footnotesize Image \copyright\ Drew Daniels,\\ \texttt{http://drewdaniels.com/}}\end{minipage}
+\begin{minipage}{0.6\textwidth}
+These pits are actually reflective bumps when viewed from the shiny side of the disk (from which the data is read), meaning that although they have the same light reflecting surface as the land, they reflect light in a diffuse way and thus appear as relatively dark spots compared to the land areas.  The image shows a small section of a CD, magnified so much that the spiral track looks like parallel lines (this is what the light will `see').
+\end{minipage}\\
+
+The pitch of the spiral track is the distance between adjacent turns of the track---in between each turn is a thin stripe of land, and it is these stripes which are acting as a diffraction grating in this experiment.
+
+\subsection{Setting up}
+
+You need to mount the CD 3--4~m in front of a wall using a clamp and stand, and set up the laser as shown below so that a diffraction pattern appears on the wall.
+
+
+\subsection{Producing cathode rays}
+The electrons you will use will be produced `boiling' them off a coil of heated metal wire, similar to a lightbulb filament.  This is known as thermionic emission.  They are then dragged away from the metal surface by a positive anode and accelerated through a large potential difference.  The anode has a small hole in it, and some of the electrons pass through this and continue as a beam of fast-moving electrons known as a cathode ray.
+
+The double beam tube used in this experiment has two electron beams, one which fires out across the tube and the other one, at right angles to the first beam, up towards the top of the tube.  The beam is selected via the connexions close to the cathode.  The first task is to connect the low voltage (\SI{6.3}{V} a.c.) to the correct terminals on the back of the tube, so that the filament in the upward pointing electron gun glows.\\
+
+\begin{minipage}{0.3\textwidth}\includegraphics[width=0.9\textwidth]{img/gun.jpg}\end{minipage}
+\begin{minipage}{0.6\textwidth}Just outside each gun muzzle there is a pair of plates for deflecting the beam by an electric field. One plate of each pair is attached directly to the gun muzzle which supports it. The other plate of each pair is connected inside the tube to the second side terminal on the tube. If the beam fails to make a clear spot then try a small potential difference to the deflecting plates.\end{minipage}\\
+
+\newpage
+In general, optimal operating voltages are as follows:\\
+Filament voltage: \SI{6.3}{V} a.c., \SI{30}{mA}\\
+Anode voltage: 0 to \SI{300}{V} d.c., \SI{30}{mA}\\
+Deflector voltage: 0 to \SI{25}{V} d.c.\\
+
+Now make the other connexions to the tube, using the circuit diagram below as a guide.
+
+\begin{center}
+\begin{tikzpicture}[circuit ee IEC]
+%tube
+\draw (5,5) +(-160:2) arc (-160:160:2);
+\draw (5,5) ++(-160:2) +(0,0)--+(-2,0);
+\draw (5,5) ++(160:2) +(0,0)--+(-2,0);
+\draw (5,5) ++(160:2) +(-2,0)--+(-2,-1.4);
+\draw (5,5) +(40:2)--+(-40:2);
+%guns
+\draw (3.4,4.7)--(3.4,5.3)--(3.9,5.3)--(4.0,5.2)--(4.0,4.8)--(3.9,4.7)--(3.4,4.7);
+\draw (4.0,4.6)--(4.1,4.7)--(4.4,4.7)--(4.5,4.6)--(4.5,4.0)--(4.0,4.0)--(4.0,4.6);
+\draw[->] (4.25,5.2)--(4.25,5.7);
+\draw[->] (4.5,4.95)--(5,4.95);
+%terminals
+\draw (2.7,5.7)--(2.7,6.5)--(2.3,6.5)--(2.3,5.7);
+\draw (2.7,4.3)--(2.7,3.5)--(2.3,3.5)--(2.3,4.3);
+%filament connexions
+\draw (-2,5.2)node [contact] {} node[anchor=south]{\SI{6.3}{V} a.c.}to (3.4,5.2);
+\draw (-2,4.8)node [contact] {} to (3.4,4.8);
+% H.T.
+\draw  (-1.5,4.8) node [contact] {} to (-1.5,0)node [contact] {} node[anchor=north]{$-$};
+\draw (-0.5,0) node [contact]{} node[anchor=north] {$+$} to (-0.5,8) to (0.5,8);
+\draw (1,8) node {A} circle (0.5);
+\draw (1.5,8) to (2.5,8) to (2.5,6.5);
+\draw (-1.0,-0.5) node[anchor=north]{35--\SI{350}{V} d.c.};
+\draw (2.7,7) node[anchor=west]{Anode};
+% deflector
+\draw (-0.5,1) node [contact] {} to (1.5,1) to (1.5,0) node [contact]{} node[anchor=north]{$-$};
+\draw (2.5,0) node[contact]{} node[anchor=north]{$+$} to (2.5,3.5);
+\draw (2.0,-0.5) node[anchor=north]{0--\SI{35}{V} d.c.};
+\draw (2.7,3) node[anchor=west]{Deflector};
+\end{tikzpicture}
+\end{center}
+
+Once all the connexions have been made, make sure the anode voltage is zero (the control knob should be turned anticlockwise as far as possible), before turning on the power supply to the metal filament.
+
+Allow at least one minute for the filament to heat up, then gradually increase the voltage to the anode.  The length of the electron beam depends on this voltage; about \SI{100}{V} is required to make the beam reach across the bulb. The path of the electron beams is green, because the electrons are travelling through a residual amount of helium gas.
+
+The anode current should always be monitored--keep the current as low as possible, whilst retaining good intensity and path length.  Proper electrical connexion should at this stage be tested by deflecting the beam with a magnet.  The negative lead should be connected to the common filament and cathode socket.  If these connexions are incorrect, the a.c. filament current will make the beam `fan out' slightly.
+
+If the beam seems too diffuse or fuzzy, try applying a slight voltage between the deflector plates.  This has the effect of producing a converging electric field which focuses the electrons and produces a tighter beam.  While a deflector voltage of \SI{25}{V} is suggested, higher voltages may be applied.
+%Another trick is to clean the accumulated charges off the screen by sweeping the beam up and down it and across it.
+
+\subsection{Effect of a magnetic field}
+
+Charged particles experience a force in a magnetic field which is proportional to their charge $Q$, their speed $v$ and the strength of the field $B$:
+\[F=QvB.\]  For an electron, $Q=e$.
+
+This force is always perpendicular to the motion, and so, in a uniform field, charged particles will travel in circular (or spiral) paths. 
+%
+%For motion in a circle, the inward centripetal force is given by theory as
+%\[F=\frac{mv^{2}}{r},\]
+%where $m$ is the mass of the object, $v$ is its speed, and $r$ is the radius of the circular path.  Combining these two equations, we have
+%\begin{array*}
+%evB&=\frac{mv^{2}}{r}\\
+%\frac{e}{m}&=\frac{v}{Br}.
+%\end{array*}
+%
+%We can find the speed of the electrons as they exit the electron gun by working out the energy they gain as they are accelerated:
+%\begin{array*}
+%\frac{1}{2}mv^{2}&=eV\\
+%v^{2}&=\frac{2eV}{m}.
+%\end{array*}
+%
+%This can be combined with the first equation to give
+%\begin{array*}
+%\frac{e}{m}&=\frac{v}{Br}
+%\frac{e^{2}}{m^{2}}&=\frac{v^{2}}{B^{2}r^{2}}
+%\frac{e^{2}}{m^{2}}&=\frac{2eV}{B^{2}r^{2}m}
+%\frac{e}{m}&=\frac{2V}{B^{2}r^{2}}
+%\end{array*}
+%
+%$B = {\left ( \frac{4}{5} \right )}^{3/2} \frac{\mu_0 n I}{R}$
+Helmholtz coils are two coils of radius $R$ which are arranged a distance $R$ apart.  This provides a fairly uniform field in between the coils.  Try turning on the Helmholtz coils, and adjusting the coils' current until the electrons travel in a circle.  You might need to fiddle with the coil / beam tube alignment to make sure the electrons' path is a circle rather than a spiral.
+
+\subsection{Measurements}
+Set the Helmholtz coil current to a value so that it will not get too hot, and a good range of beam path radii can be generated by changing the accelerating voltage.  Record this value, and give an estimate of the error \answerline
+
+You are going to change the accelerating voltage and measure the beam radius.\\
+
+\begin{tabular}{|c|c|c|}
+\hline
+Accelerating voltage / & Beam radius / & $(\text{Beam radius})^{2}$ / \\
+V & & \\
+\hline 
+&& \\
+\hline
+&& \\
+\hline
+&& \\
+\hline
+&& \\
+\hline
+&& \\
+\hline
+&& \\
+\hline
+&& \\
+\hline
+&& \\
+\hline
+&& \\
+\hline
+&& \\
+\hline
+\end{tabular}\\
+
+Record the number of turns $n$ on the Helmholtz coils: \answerline
+
+What do you think the error would be? \answerline
+
+Measure the radius $R$ of the Helmholtz coils, and give an estimate of your error: \answerline
+
+\begin{questions}
+\question How did you measure the beam radius? \fillwithlines{2cm}
+
+\question What is the accuracy of your method? \fillwithlines{1cm}
+
+\question Plot a graph of the accelerating voltage $V$ on the $y$-axis and the square of the beam radius $r^{2}$ on the $x$-axis.
+
+\question Work out the gradient on your graph, and record it here, with a unit: \answerline
+
+According to theory, the gradient $G$ of your graph is related to the specific charge $e/m$ of the electron by
+\[\frac{e}{m}=\left(\frac{5}{4}\right)^{3} \frac{R^{2}}{\mu_{0}^{2}n^{2}I^{2}} G,\]
+where $I$ is the current in the Helmholtz coils, $R$ is the radius of the coils, $n$ is the number of turns, and $\mu_{0}$ is the permeability of free space, $4\pi$\SI{e-7}{H.m^{-1}}.
+
+\question Work out the value your gradient gives for the electron's specific charge.\fillwithlines{2cm}
+
+\question What do you think the largest source of error in this experiment is and why? \fillwithlines{3cm}
+
+\end{questions}
