@@ -14,191 +14,132 @@ A (negative) voltage, called the stopping voltage $V_{S}$ can be applied to stop
 
 \subsection{Setup}
 
-You need to use a d.c. power supply of \SI{6}{V}, a voltmeter and a milliammeter.  All of the LEDs you will use are in a specially-made box for this experiment, which you need to connect up with the voltage supply and measuring apparatus as shown on the box.  The circuit is as follows:\\
+In this practical, you will use the Virtual Physical Laboratory (VPL),\footnote{A software package written by Dr John Nunn of the National Physical Laboratory (NPL) and provided free to UK schools through the generous support of NPL and the Institute of Physics.} which is installed on the school laptops.  
 
-\begin{minipage}{0.6\textwidth}
-\begin{tikzpicture}[circuit ee IEC,set diode graphic=var diode IEC graphic]
-\draw (0,0) node[contact]{} node[anchor=east]{\SI{0}{V}} to (1,0) to [resistor] (1,5) to (0,5) node{} node[anchor=east]{\SI{+6}{V}} node[contact]{};
-\draw (0,0) to (1,0) to [circuit handle symbol={draw,shape=circle,label=center:{A},minimum size=5mm}] (3,0) node{} to [resistor] (5.5,0) node{} to (9,0);
-\draw (9,0) to [circuit handle symbol={draw,shape=circle,label=center:{V},minimum size=5mm}] (9,5);
-\draw (9,5) to [circuit handle symbol={draw,shape=circle,minimum size=2mm}] (2,5) to (2,2.5);
-\draw[->] (2,2.5)--(1.2,2.5);
-\draw (5.5,0) to (5.5,1) node[contact]{};
-\draw (3.5,1) to (7.5,1);
-\foreach \diode in {0,1,...,4}
-{
-\draw (3.5+\diode,3.5) to [diode={light emitting}] (3.5+\diode,1);
-\draw (3.5+\diode,3.7) circle (0.2);
-}
-\draw[->] (5.7,4.9) .. controls (6.2,4.8) and (4.2,4.2) .. (6.2,3.8);
-\end{tikzpicture}
-\end{minipage}
-\begin{minipage}{0.35\textwidth}
-Some data on the LEDs from the manufacturer is below:\\
+When you open VPL, %instructions writeen for V10
+you need to open the \texttt{Quantum > Photelectric effect} experiment, when you will be presented with the following:
 
-\renewcommand{\arraystretch}{1}
-\begin{tabular}{lcc}
-\hline
-Colour & $\lambda$/nm & $I_{\text{max}}$/mA\\
-\hline
-Red & 700 & 25\\
-Orange & 627 & 30\\
-Yellow & 590 & 30\\
-Green & 565 & 25\\
-Blue & 430 & 30\\
-\hline
-\end{tabular}
-\renewcommand{\arraystretch}{2}
-\end{minipage}
+\hfill \includegraphics[width=0.7\textwidth]{img/vpl-pe.png} \hfill{}
+
+The apparatus in this virtual experiment consists of a metal surface (this might in practice be e.g.\ a photodiode, from which electrons will leave when light is incident) in a box with connexions, a digital voltmeter, to measure the stopping voltage $V_{S}$, a picoammeter to measure the very tiny current of the emitted electrons, and a set of filters.
 
 \subsection{Measurements}
-For each LED, you need to take several readings of current and voltage (which will allow you to plot a current-voltage characteristic), by increasing the voltage from zero until the current reaches the manufacturer's recommended maximum current (and no further).
-
-\begin{minipage}{0.3\textwidth}
-\begin{tabular}{|p{2cm}|p{2cm}|}
-\hline
-\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
-\hline
-&\\
-\hline
-&\\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-\end{tabular}
-\end{minipage}
-\begin{minipage}{0.3\textwidth}
-\begin{tabular}{|p{2cm}|p{2cm}|}
-\hline
-\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
-\hline
-&\\
-\hline
-&\\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-\end{tabular}
-\end{minipage}
-\begin{minipage}{0.3\textwidth}
-\begin{tabular}{|p{2cm}|p{2cm}|}
-\hline
-\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
-\hline
-&\\
-\hline
-&\\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-\end{tabular}
-\end{minipage}
-
-\begin{minipage}{0.3\textwidth}
-\begin{tabular}{|p{2cm}|p{2cm}|}
-\hline
-\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
-\hline
-&\\
-\hline
-&\\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-\end{tabular}
-\end{minipage}
-\begin{minipage}{0.3\textwidth}
-\begin{tabular}{|p{2cm}|p{2cm}|}
-\hline
-\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
-\hline
-&\\
-\hline
-&\\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-\end{tabular}
-\end{minipage}
-\begin{minipage}{0.3\textwidth}
-\begin{tabular}{|p{2cm}|p{2cm}|}
-\hline
-\multicolumn{1}{|c|}{$V$/V} & \multicolumn{1}{|c|}{$I$/}\\
-\hline
-&\\
-\hline
-&\\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-\end{tabular}
-\end{minipage}
-
-\begin{questions}
-\question Plot the current-voltage characteristics for all of the LEDs on the {\bf same} graph, with voltage on the $x$-axis and current on the $y$-axis (take care to label the curves!)  On this graph, you need to extrapolate each curve down to the $x$-axis to find the voltage at which current first starts to flow, and light photons start to be emitted.  Use this to fill in the table below.
+\begin{itemize}
+\item Check that the reverse voltage is zero (drag the slider right down to the bottom), and the photoelectric current goes to zero when the lamp brightness is turned down to zero.
+\item Set the lamp to about half the maximum brightness.
+\item Make sure you are using target material 2 (select this using the yellow switch).  Select the violet filter (\SI{430}{nm}) and notice that you get a small photoelectric current ($\sim\SI{7}{pA}$) flowing.
+\item Slowly increase the reverse voltage using the slider until the photoelectric current \emph{just} drops to zero.  This means that electrons are not leaving the surface.
+\item Record this voltage $V_{S}$ in the table below. (NB You can also click \texttt{Store data} in the program which will allow you to plot a graph on the computer.  However, to get the most out of this experiment, only use this as a check at the end!)
+\item The filters have different colours and so they each let a different wavelength through.  Copy down the wavelength and convert this into a frequency (in \SI{e14}{Hz}) using $f=\frac{c}{\lambda}$, where $c$ is the speed of light, \SI{3e8}{m.s^{-1}}.  The first one has been done for you.
+\item Repeat this process for all the different coloured filters.
+\end{itemize}
 
 \begin{center}
-\begin{tabular}{|l|c|p{2cm}|p{2cm}|}
+\begin{tabular}{|c|c|p{2cm}|p{2cm}|}
 \hline
-Colour & $\lambda$ &  \multicolumn{1}{|c|}{$1/\lambda$ } & \multicolumn{1}{|c|}{$V_{\text{min}}$}\\
- & / nm & \multicolumn{1}{|c|}{/ \ldots} & \multicolumn{1}{|c|}{/ V} \\
+Filter colour & $\lambda$/nm & \multicolumn{1}{|c|}{$f$/\SI{e14}{Hz}} & \multicolumn{1}{|c|}{$V_{S}$/V}\\
 \hline
-Red & 700 & &\\
+Infra-Red & & &\\
 \hline
-Orange & 627 & &\\
+Red & & & \\
 \hline
-Yellow & 590 & &\\
+Orange & & & \\
 \hline
-Green & 565 & &\\
+Yellow & & & \\
 \hline
-Blue & 430 & &\\
+Green & & & \\
+\hline
+Blue & & & \\
+\hline
+Indigo & & & \\
+\hline
+Violet & 430 & 6.98 & \\
+\hline
+Ultra-Violet & & & \\
 \hline
 \end{tabular}
 \end{center}
 
-\question Now plot a second graph, this time of the minimum voltage for light emission on the $y$-axis against the LED wavelength on the $x$-axis.
+\begin{questions}
+\question Plot a graph of $V_{S}$ on the $y$-axis against frequency $f$ on the $x$-axis.  \emph{Choose your scales so that the line intercepts the $y$-axis.  This will mean going down to $-\SI{2.0}{V}$ and \SI{0.0e14}{Hz}}  Draw a line of best fit.
 
-\question Work out the gradient, showing your working on the graph. \answerline
+\newpage
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
 
-According to theory, your gradient $G$ is related to Planck's constant by $h=eG/c$, where $e$ is the electronic charge, \SI{1.6e-19}{C}, and $c$ is the speed of light, \SI{3e8}{m.s^{-1}}.
+\tikzset{normal lines/.style={gray, very thin}} 
+\tikzset{margin lines/.style={gray, thick}} 
+\tikzset{mm lines/.style={gray, ultra thin}} 
+\tikzset{strong lines/.style={black, very thin}} 
+\tikzset{master lines/.style={black, very thick}} 
+\tikzset{dashed master lines/.style={loosely dashed, black, very thick}} 
 
-\question What value does your experiment give for $h$? \answerline
+\node at ([xshift=1cm, yshift=8.5mm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
 
-\question Comment briefly on this value, and on the quality of your data, on your second graph. What do you think were the biggest sources of error in this experiment?
+    \draw[style=mm lines,step=1mm] (0,0) grid +(19cm,28cm); 
+    \draw[style=strong lines,step=1cm] (0,0) grid +(19cm,28cm); 
+
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+
+
+\newpage
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+
+\tikzset{normal lines/.style={gray, very thin}} 
+\tikzset{margin lines/.style={gray, thick}} 
+\tikzset{mm lines/.style={gray, ultra thin}} 
+\tikzset{strong lines/.style={black, very thin}} 
+\tikzset{master lines/.style={black, very thick}} 
+\tikzset{dashed master lines/.style={loosely dashed, black, very thick}} 
+
+\node at ([xshift=1cm, yshift=8.5mm] current page.south west){
+  \begin{tikzpicture}[remember picture, overlay]
+
+    \draw[style=mm lines,step=1mm] (0,0) grid +(19cm,28cm); 
+    \draw[style=strong lines,step=1cm] (0,0) grid +(19cm,28cm); 
+
+  \end{tikzpicture}
+};
+\end{tikzpicture}
+
+\newpage
+
+\question Calculate and record the gradient of the graph, showing your working on the graph. \answerline
+
+\question Measure and record the intercept of the line with the $y$-axis. \answerline
+
+Rearranging the photoelectric equation,
+\begin{align*}
+hf&=\phi+E_{k},\\
+hf&=\phi+eV_{S},\\
+V_{S}&=\left(\frac{h}{e}\right)f-\frac{\phi}{e}.\\
+\end{align*}
+This final version of the equation is in the form $y=mx+c$.
+
+\question Use this information and your previous answers to calculate
+\begin{parts}
+\part Planck's constant $h$,
+\fillwithlines{1.5cm}
+\part the work function $\phi$ of the target material,
+\fillwithlines{1.5cm}
+\part the work function into electron volts (eV).
+\fillwithlines{1cm}
+\end{parts}
+
+\question If a material with a \emph{larger} work function were to be used, explain what effect, if any this would have on
+\begin{parts}
+\part the gradient,
+\fillwithlines{2.5cm}
+\part the intercept on the $y$-axis,
+\fillwithlines{2.5cm}
+NB If you have time, try using VPL to obtain and plot data for `taget material 1', which will allow you to test your predictions.
+\end{parts}
+
+\question The accepted value for Planck's constant is \SI{6.63e-34}{J.s}.  Calculate the percentage error in your measured value, showing your working
+\fillwithlines{2cm}
+
 \end{questions}
