@@ -1,108 +1,83 @@
 \section{Internal Resistance}
 \label{intres}
+%NB this is closely based on the AQA June 2009 ISA
 
-The challenge in this experiment is to determine the resistance of a small resistor which is hidden from view in a box.
+In this experiment you are going to carry out an experiment to investigate the relationship between the potential difference across the terminals of a \SI{1.5}{V} `AA' battery and the current through it.
 
-\begin{center}
-\begin{tikzpicture}[circuit ee IEC]
-%power supply + rheostat slide
-\draw (0,0) node[contact]{} node[anchor=east]{\SI{0}{V}} to (1,0) to [resistor] (1,5) to (0,5) node{} node[anchor=east]{+\SI{4}{V}} node[contact]{};
-%bottom rail
-\draw (0,0) to (11,0);
-%right end
-\draw (11,0) to [circuit handle symbol={draw,shape=circle,label=center:{V},minimum size=10mm}] (11,5);
-%pot +top rail
-\draw (2,2.5) to (2,5) to [circuit handle symbol={draw,shape=circle,label=center:{A},minimum size=10mm}] (8,5) to (11,5);
-\draw[->] (2,2.5)--(1.2,2.5);
-%contacts:
-\draw (8,0) to (8,2) node[contact]{};
-\draw (8,5) to (8,3) node[contact]{};
-\draw (8,2.5) node {component};
-\end{tikzpicture}
-\end{center}
+You will use several different resistors, each of which will draw a different current through the battery.
 
 \begin{questions}
-\question Using the variable resistor (and if necessary the voltage setting on the power supply), measure the current through  the ohmic conductor for voltages between \SI{0.00}{V} and \SI{0.60}{V}, ion \SI{0.10}{V} steps.
-
+\question Set up the circuit as show in the diagram below, using the \SI{22}{\ohm} resistor.
 \begin{center}
-\begin{tabular}{|c|c|}
-\hline
-Voltage $V$ / V & Current $I$ / mA\\
-\hline 
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-& \\
-\hline
-\end{tabular}
+\begin{tikzpicture}[circuit ee IEC]
+%top rail with battery
+\draw (0,5) to [battery] (8,5);
+%left side and resistor
+\draw (0,5) to (0,0) to [resistor] (8,0);
+%right side with ammeter
+\draw (8,0) to [circuit handle symbol={draw,shape=circle,label=center:{A},minimum size=10mm}] (8,5);
+%voltmeter
+\draw (2,5) to (2,3) to [circuit handle symbol={draw,shape=circle,label=center:{V},minimum size=10mm}] (6,3) to (6,5);
+%labels
+\draw (4,-0.5) node {\SI{22}{\ohm}};
+\draw (4,5.5) node {\SI{1.5}{V} `AA' battery};
+\end{tikzpicture}
 \end{center}
+
+\question Record the current shown on the ammeter. \answerline
+
+\question What is the precision of the ammeter? \answerline
+
+\question Using the instrument precision, work out the percentage uncertainty in the ammeter reading.
+\fillwithlines{2cm}
+
+\question Explain why using resistors with very high values would be unsuitable in this experiment.
+\fillwithlines{3cm}
 
 \newpage
 
-\question Replace the ohmic conductor with the filament lamp, and repeat the experiment.
+\question Substituing each resistor into the circuit in turn---start by replacing the \SI{22}{\ohm} resistor with the \SI{10}{\ohm} resistor---record the values of the current and terminal p.d. in the table below.  \emph{Make sure you disconnect the battery between readings.}
 
 \begin{center}
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|c|c|}
 \hline
-Voltage $V$ / V & Current $I$ / mA\\
+Resistor value / \si{\ohm} & Current $I$ / mA & Terminal p.d. / V\\
 \hline 
-& \\
+22 & & \\
 \hline
-& \\
+10 & & \\
 \hline
-& \\
+6.8 & & \\
 \hline
-& \\
+4.7 & & \\
 \hline
-& \\
+3.3 & & \\
 \hline
-& \\
+2.2 & & \\
 \hline
-& \\
+1.5 & & \\
+\hline
+1.0 & & \\
 \hline
 \end{tabular}
 \end{center}
 
+\question Plot a graph of terminal p.d. on the $y$-axis against current $I$ on the $x$-axis.
 
-\question Replace the filament lamp withthe diode. \textbf{Make sure that the diode is forward biased}, i.e. it faces in the direction of conventional current flow.  Repeat the experiment, however this time increase the p.d. in steps of \SI{0.10}{V} until \SI{0.5}{V}, noting the current, then continue by increasing the current in steps of \SI{20.0}{mA}, noting the voltage.
+The equation relating terminal p.d. $V$ and current $I$ is
+\[V = \epsilon - Ir,\]
+where $\epsilon$ is the emf of the supply and $r$ is the internal resistance of the supply.
 
-\begin{center}
-\begin{tabular}{|c|c|}
-\hline
-Voltage $V$ / V & Current $I$ / mA\\
-\hline 
-0.00 & \\
-\hline
-0.10 & \\
-\hline
-0.20 & \\
-\hline
-0.30 & \\
-\hline
-0.40 & \\
-\hline
-0.50 & \\
-\hline
-& 20.0\\
-\hline
-& 40.0\\
-\hline
-& 60.0\\
-\hline
-\end{tabular}
-\end{center}
+\question By reference to the equation of a straight line $y = mx + c$,
+\begin{parts}
+\part what physical quantity is represented by the intercept on the p.d. axis?
+\fillwithlines{1cm}
+\part what physical quantity is represented by the gradient of the graph?
+\fillwithlines{1cm}
+\end{parts}
 
-\question Plot a graph of $I$ on the $y$-axis against $V$ on the $x$-axis for each component \textbf{using the same scales (but different axes) for all.}
-
+\question Use a line of best fit to help you to determine the emf and the internal resistance of the battery in this experiment, showing your working clearly.
+\fillwithlines{5cm}
 
 \newpage
 \thispagestyle{empty}
@@ -148,31 +123,30 @@ Voltage $V$ / V & Current $I$ / mA\\
 \end{tikzpicture}
 
 \newpage
-\question \begin{parts} 
-\part Calculate the gradient of the graph for the ohmic conductor
+\question Why do you think you were instructed to switch off or disconnect the battery between readings?
+\fillwithlines{2cm}
 
-\fillwithdottedlines{3cm}
+\question Do you think your readings are reliable? Give a reason for your answer.
+\fillwithlines{2cm}
 
-\part The resistance of the ohmic conductor is given by the reciprocal of this gradient.  Calculate the resistance of the ohmic conductor.
+\question The manufacturer quotes the resistors used as having an uncertainty (the
+manufacturer's `tolerance') of 5\% . 
+\begin{parts}
+\part Calculate the maximum possible value of the \SI{6.8}{\ohm} resistor used in this experiment. \answerline
+\part Explain why it would not have made any difference to the value of  obtained in the
+experiment if resistors with a tolerance of only 2\%\ had been used instead.
+\fillwithlines{2cm}
+\end{parts}
 
-\fillwithdottedlines{2cm}
-
-\part Using values from you table, calculate the resistance of the filament lamp for two different calues of voltage.
-
-\fillwithdottedlines{2cm}
-
-\part Explain why the resistance of the filament lamp changes in this way.
-
-\fillwithdottedlines{3cm}
-
-\part Explain the shape of the diode graph in terms of its resistance.
-
-\fillwithdottedlines{3cm}
-
-\part What would the graph for the diode look like if it were to be placed in the reverse direction?
-
-\fillwithdottedlines{3cm}
-
+\question The voltmeter used in the above experiment was found to have a calibration error
+whereby every reading was \SI{0.22}{V} too high.
+\begin{parts}
+\part What is the name given to this type of error?
+\fillwithlines{1cm}
+\part How, if at all, would this have affected the value obtained for the intercept of the graph?
+\fillwithlines{2cm}
+\part How, if at all, would this have affected the value for the gradient of the graph?
+\fillwithlines{2cm}
 \end{parts}
 
 \end{questions}
